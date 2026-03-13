@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -151,6 +152,8 @@ font-size:0.92rem;
 <h1>Tyr Capital</h1>
 </div>
 
+</header>
+
 <main class="container">
 
 <section class="section-card">
@@ -232,3 +235,6 @@ or an offer to manage funds. Cryptocurrency markets involve substantial risk.
 </div>
 
 </footer>
+
+</body>
+</html>

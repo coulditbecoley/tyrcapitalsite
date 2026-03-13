@@ -1,8 +1,3 @@
-
-<html>
-<head>
-<title>Tyr Capital</title>
-
 <style>
 body{
 font-family: Arial;

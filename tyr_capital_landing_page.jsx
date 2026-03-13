@@ -9,10 +9,10 @@ export default function TyrCapitalLandingPage() {
               Tyr Capital
             </div>
             <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-              Disciplined crypto trading and capital management.
+              Disciplined Trading and Capital Management.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-              Tyr Capital is a modern trading brand focused on structure, risk discipline, and transparent market research.
+              Tyr Capital is a private trading brand focused on structure, risk managment, and transparent market research.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
@@ -36,9 +36,9 @@ export default function TyrCapitalLandingPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/20">
             <p className="text-sm uppercase tracking-[0.2em] text-blue-300">About</p>
-            <h2 className="mt-4 text-3xl font-semibold">Built around discipline and clarity.</h2>
+            <h2 className="mt-4 text-3xl font-semibold">Built On Discipline and Clarity.</h2>
             <p className="mt-4 text-base leading-7 text-white/70">
-              Tyr Capital presents a professional digital presence for a trading-focused brand. This starter homepage is designed to be clean, credible, and easy to expand as your company grows.
+              Tyr Capital presents a professional digital presence for a trading-focused brand.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
@@ -61,7 +61,7 @@ export default function TyrCapitalLandingPage() {
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm uppercase tracking-[0.2em] text-purple-300">Services</p>
-            <h2 className="mt-4 text-3xl font-semibold">Simple sections you can customize.</h2>
+            <h2 className="mt-4 text-3xl font-semibold">Decisions are made using structured analysis rather than emotional reaction.</h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
@@ -83,11 +83,11 @@ export default function TyrCapitalLandingPage() {
           <p className="text-sm uppercase tracking-[0.2em] text-blue-300">Contact</p>
           <h2 className="mt-4 text-3xl font-semibold">Ready to launch Tyr Capital online?</h2>
           <p className="mt-4 max-w-2xl text-white/70">
-            Replace this section with your email address, social links, company details, and any legal language you want displayed on the website.
+            Tyr Capital is not a private fund and does not invest for others.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 text-sm text-white/80">
-            <span className="rounded-full border border-white/15 px-4 py-2">Email: yourname@tyrcapital.com</span>
-            <span className="rounded-full border border-white/15 px-4 py-2">Location: Georgia, USA</span>
+            <span className="rounded-full border border-white/15 px-4 py-2">Email: tyrcapitalllc.com</span>
+            <span className="rounded-full border border-white/15 px-4 py-2">Telegram Channel: Tyr Capital Trades</span>
           </div>
         </div>
       </section>

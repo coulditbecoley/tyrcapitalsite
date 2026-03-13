@@ -1,266 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tyr Capital</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tyr Capital</title>
 
-  <style>
-    :root{
-      --bg:#07101c;
-      --bg-secondary:#0d1726;
-      --card:rgba(14, 24, 38, 0.88);
-      --text:#e8edf5;
-      --muted:#b8c2d3;
-      --accent:#c8a45a;
-      --border:rgba(255,255,255,0.08);
-      --shadow:0 18px 45px rgba(0,0,0,0.35);
-      --radius:22px;
-    }
+<style>
 
-    *{
-      box-sizing:border-box;
-    }
+:root{
+--bg:#07101c;
+--bg-secondary:#0d1726;
+--card:rgba(14, 24, 38, 0.88);
+--text:#e8edf5;
+--muted:#b8c2d3;
+--accent:#c8a45a;
+--border:rgba(255,255,255,0.08);
+--shadow:0 18px 45px rgba(0,0,0,0.35);
+--radius:22px;
+}
 
-    html{
-      scroll-behavior:smooth;
-    }
+*{
+box-sizing:border-box;
+}
 
-    body{
-      margin:0;
-      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-      background:
-        linear-gradient(180deg, #07101c 0%, #091423 45%, #0b1420 100%);
-      color:var(--text);
-      line-height:1.7;
-    }
+body{
+margin:0;
+font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+background:linear-gradient(180deg,#07101c 0%,#091423 45%,#0b1420 100%);
+color:var(--text);
+line-height:1.7;
+}
 
-    .container{
-      width:min(1100px, calc(100% - 40px));
-      margin:0 auto;
-    }
+.container{
+width:min(1100px, calc(100% - 40px));
+margin:0 auto;
+}
 
-    header{
-      position:relative;
-      min-height:560px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:40px 20px;
-      background-image:url("images/tyr-bg.png");
-      background-size:cover;
-      background-position:center;
-      overflow:hidden;
-      border-bottom:1px solid rgba(255,255,255,0.06);
-    }
+header{
 
-    header::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(to bottom, rgba(4,10,18,0.52), rgba(4,10,18,0.8)),
-        rgba(4,10,18,0.32);
-      backdrop-filter: blur(2px);
-    }
+position:relative;
+min-height:520px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
 
-    .hero-card{
-      position:relative;
-      z-index:2;
-      max-width:760px;
-      background:rgba(7, 14, 24, 0.48);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:28px;
-      padding:42px 32px;
-      box-shadow:var(--shadow);
-      backdrop-filter: blur(6px);
-    }
+background-image:url("images/tyr-bg.png");
+background-size:cover;
+background-position:center;
 
-    h1{
-      margin:0;
-      font-size:clamp(2.6rem, 6vw, 4.5rem);
-      font-weight:700;
-      letter-spacing:1px;
-      color:#ffffff;
-    }
+border-bottom:1px solid rgba(255,255,255,0.06);
 
-    .tagline{
-      margin-top:14px;
-      font-size:clamp(1rem, 2vw, 1.25rem);
-      color:#d7deea;
-    }
+}
 
-    .hero-text{
-      margin:22px auto 0;
-      max-width:620px;
-      font-size:1.05rem;
-      color:var(--muted);
-    }
+header::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to bottom,rgba(4,10,18,0.55),rgba(4,10,18,0.82));
+}
 
-    main{
-      padding:70px 0 50px;
-    }
+.hero-card{
+position:relative;
+z-index:2;
+background:rgba(7,14,24,0.5);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+padding:42px 32px;
+box-shadow:var(--shadow);
+}
 
-    .section-card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:34px 30px;
-      margin-bottom:28px;
-    }
+h1{
+margin:0;
+font-size:clamp(3rem,6vw,4.8rem);
+font-weight:700;
+letter-spacing:2px;
+}
 
-    h2{
-      margin:0 0 16px;
-      font-size:1.9rem;
-      font-weight:650;
-      color:var(--accent);
-      letter-spacing:0.3px;
-    }
+main{
+padding:70px 0 50px;
+}
 
-    p{
-      margin:0 0 16px;
-      font-size:1.05rem;
-      color:var(--muted);
-    }
+.section-card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+padding:34px 30px;
+margin-bottom:28px;
+}
 
-    p:last-child{
-      margin-bottom:0;
-    }
+h2{
+margin:0 0 16px;
+font-size:1.9rem;
+font-weight:650;
+color:var(--accent);
+}
 
-    .image-wrap{
-      margin:22px 0 0;
-    }
+p{
+margin:0 0 16px;
+font-size:1.05rem;
+color:var(--muted);
+}
 
-    .feature-image{
-      width:100%;
-      display:block;
-      border-radius:20px;
-      box-shadow:0 16px 40px rgba(0,0,0,0.35);
-      border:1px solid rgba(255,255,255,0.08);
-    }
+.image-wrap{
+margin-top:20px;
+}
 
-    .contact-box{
-      display:inline-block;
-      margin-top:10px;
-      padding:14px 18px;
-      background:rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:16px;
-      color:#f3f6fb;
-      font-weight:600;
-      box-shadow:0 10px 25px rgba(0,0,0,0.25);
-    }
+.feature-image{
+width:100%;
+border-radius:20px;
+box-shadow:0 16px 40px rgba(0,0,0,0.35);
+border:1px solid rgba(255,255,255,0.08);
+}
 
-    footer{
-      padding:10px 0 50px;
-    }
+.contact-box{
+display:inline-block;
+margin-top:15px;
+padding:14px 20px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:16px;
+color:#f3f6fb;
+font-weight:600;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
 
-    .footer-card{
-      background:rgba(10,18,30,0.92);
-      border:1px solid var(--border);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      padding:22px 24px;
-      color:#97a3b8;
-      font-size:0.92rem;
-    }
+footer{
+padding:10px 0 50px;
+}
 
-    @media (max-width: 768px){
-      header{
-        min-height:500px;
-      }
+.footer-card{
+background:rgba(10,18,30,0.92);
+border:1px solid var(--border);
+border-radius:18px;
+box-shadow:var(--shadow);
+padding:22px 24px;
+color:#97a3b8;
+font-size:0.92rem;
+}
 
-      .hero-card{
-        padding:30px 22px;
-      }
-
-      .section-card{
-        padding:26px 22px;
-      }
-
-      h2{
-        font-size:1.55rem;
-      }
-
-      p{
-        font-size:1rem;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
-  <header>
-    <div class="hero-card">
-      <h1>Tyr Capital</h1>
-      <div class="tagline">Digital Asset Managment & Market Research</div>
-      <p class="hero-text">
-  
-  </header>
+<header>
 
-  <main class="container">
+<div class="hero-card">
+<h1>Tyr Capital</h1>
+</div>
 
-    <section class="section-card">
-      <h2>About Tyr Capital</h2>
-      <p>
-        Tyr Capital is a digital asset trading company focused on disciplined strategy development,
-        structured risk management, and market research across cryptocurrency markets.
-      </p>
-      <p>
-        Inspired by the Norse god Tyr, the company emphasizes discipline, consistency,
-        and long-term thinking when navigating the volatility of digital asset markets.
-      </p>
-      <div class="image-wrap">
-        <img src="images/tyr-bg.png" alt="Tyr Capital visual" class="feature-image">
-      </div>
-    </section>
+</header>
 
-    <section class="section-card">
-      <h2>Strategy</h2>
-      <p>
-        Tyr Capital studies market structure, technical analysis, and macro trends
-        to identify opportunities within cryptocurrency markets including Bitcoin
-        and other emerging digital asset sectors.
-      </p>
-      <p>
-        Capital preservation, disciplined execution, and risk-defined positioning remain
-        central principles behind every trading decision.
-      </p>
-    </section>
+<main class="container">
 
-    <section class="section-card">
-      <h2>Research</h2>
-      <p>
-        The firm publishes market observations and research covering cryptocurrency cycles,
-        macro developments, price structure, and evolving blockchain technologies.
-      </p>
-      <p>
-        This research-first approach is designed to support informed decision-making
-        and a consistent long-term market framework.
-      </p>
-    </section>
+<section class="section-card">
 
-    <section class="section-card">
-      <h2>Contact</h2>
-      <p>
-        Email:
-      </p>
-      <div class="contact-box">
-        tyrcapitalllc@gmail.com
-      </div>
-    </section>
+<h2>About Tyr Capital</h2>
 
-  </main>
+<p>
+Tyr Capital is a digital asset trading company focused on disciplined strategy development,
+structured risk management, and market research across cryptocurrency markets.
+</p>
 
-  <footer class="container">
-    <div class="footer-card">
-      Disclaimer: Tyr Capital provides market research and commentary for informational purposes only.
-      Nothing on this website constitutes financial advice, investment advice, or an offer to manage funds.
-      Cryptocurrency and digital asset markets involve substantial risk.
-    </div>
-  </footer>
+<p>
+Inspired by the Norse god Tyr, the company emphasizes discipline, consistency,
+and long-term thinking when navigating the volatility of digital asset markets.
+</p>
+
+<div class="image-wrap">
+<img src="images/tyr-bg.png" class="feature-image">
+</div>
+
+</section>
+
+
+<section class="section-card">
+
+<h2>Strategy</h2>
+
+<p>
+Tyr Capital studies market structure, technical analysis, and macro trends
+to identify opportunities within cryptocurrency markets including Bitcoin
+and other emerging digital asset sectors.
+</p>
+
+<p>
+Capital preservation, disciplined execution, and risk-defined positioning remain
+central principles behind every trading decision.
+</p>
+
+</section>
+
+
+<section class="section-card">
+
+<h2>Research</h2>
+
+<p>
+The firm publishes market observations and research covering cryptocurrency cycles,
+macro developments, price structure, and evolving blockchain technologies.
+</p>
+
+</section>
+
+
+<section class="section-card">
+
+<h2>Contact</h2>
+
+<p>
+Join our Telegram Channel Tyr Capital Trades or Email for more information.
+</p>
+
+<div class="contact-box">
+tyrcapitalllc@gmail.com
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="container">
+
+<div class="footer-card">
+
+Disclaimer: Tyr Capital provides market research and commentary for informational
+purposes only. Nothing on this website constitutes financial advice, investment advice,
+or an offer to manage funds. Cryptocurrency markets involve substantial risk.
+
+</div>
+
+</footer>
 
 </body>
 </html>

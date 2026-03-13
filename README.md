@@ -248,10 +248,10 @@
     <section class="section-card">
       <h2>Contact</h2>
       <p>
-        For business inquiries, partnerships, or research-related questions, please contact Tyr Capital.
+        Email:
       </p>
       <div class="contact-box">
-        contact@tyrcapital.com
+        tyrcapitalllc@gmail.com
       </div>
     </section>
 

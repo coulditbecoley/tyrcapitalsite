@@ -11,39 +11,14 @@ color:white;
 margin:0;
 }
 
-header{
-padding:60px;
-text-align:center;
-background:#111;
-}
-
-section{
-padding:60px;
-max-width:900px;
-margin:auto;
-}
-
-h1{
-font-size:42px;
-}
-
-h2{
-color:#888;
-}
-
-footer{
-text-align:center;
-padding:40px;
-font-size:12px;
-color:#777;
-}
-</style>
-
-</head>
-
-<body>
-
 <header>
+
+<img src="coulditbecoley_Use_the_geogrphy_background_with_a_T_in_the_mi_50927ab4-0f37-4425-9e10-21e49f205a8b_3 (1).png" width="200">
+
+<h1>Tyr Capital</h1>
+<p>Digital Asset Trading & Market Research</p>
+
+</header>
 <h1>Tyr Capital</h1>
 <p>Digital Asset Trading & Market Research</p>
 </header>

@@ -350,6 +350,123 @@
         font-size:1.55rem;
       }
     }
+    .lender-form{
+  margin-top:22px;
+  display:grid;
+  gap:16px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.form-group label{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:0.95rem;
+  font-weight:600;
+  color:#e8edf5;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.10);
+  background:rgba(255,255,255,0.04);
+  color:#f3f6fb;
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:0.98rem;
+  outline:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);
+  transition:border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+  color:#95a1b7;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:rgba(200,164,90,0.75);
+  box-shadow:0 0 0 3px rgba(200,164,90,0.12);
+  background:rgba(255,255,255,0.06);
+}
+
+.form-group textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+.checkbox-group{
+  display:grid;
+  gap:10px;
+  margin-top:4px;
+}
+
+.checkbox-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:"Segoe UI", Arial, sans-serif;
+  color:#d7deea;
+}
+
+.checkbox-item input{
+  width:18px;
+  height:18px;
+  accent-color:#c8a45a;
+}
+
+.form-submit{
+  margin-top:6px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  align-items:center;
+}
+
+.submit-btn{
+  border:none;
+  cursor:pointer;
+  padding:14px 22px;
+  border-radius:14px;
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-weight:700;
+  font-size:0.98rem;
+  color:#08111c;
+  background:linear-gradient(135deg,#e1c27a,#c8a45a);
+  box-shadow:0 12px 30px rgba(200,164,90,0.28);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 34px rgba(200,164,90,0.34);
+}
+
+.form-note{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:0.9rem;
+  color:#97a3b8;
+}
+
+@media (max-width: 700px){
+  .form-row{
+    grid-template-columns:1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -468,17 +585,101 @@ box-shadow:0 10px 35px rgba(0,0,0,0.6);
       </div>
     </section>
 <section id="lender" class="section-card">
+  <h2>Become A Lender</h2>
 
-<h2>Become A Lender</h2>
+  <p>
+    Want to earn high interest on your short term loan? Terms as low as 6 months.
+    Submit an offer now!
+  </p>
 
-<p>
-Want to earn high interest on your short term loan?
-</p>
+  <form
+    class="lender-form"
+    action="https://formspree.io/f/mdawbglw"
+    method="POST"
+  >
+    <div class="form-row">
+      <div class="form-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full_name" placeholder="Your full name" required>
+      </div>
 
-<p>
-Terms as low as 12 months. Contact us for more information.
-</p>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+    </div>
 
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Optional">
+      </div>
+
+      <div class="form-group">
+        <label for="term">Preferred Loan Term</label>
+        <select id="term" name="loan_term">
+          <option value="">Select a term</option>
+          <option>6 months</option>
+          <option>12 months</option>
+          <option>18 months</option>
+          <option>24 months</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="amount">Potential Loan Amount</label>
+        <select id="amount" name="amount_range">
+          <option value="">Select a range</option>
+          <option>$25,000 - $50,000</option>
+          <option>$50,000 - $100,000</option>
+          <option>$100,000 - $500,000</option>
+          <option>$500,000+</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="contact-method">Preferred Contact Method</label>
+        <select id="contact-method" name="contact_method">
+          <option value="">Select one</option>
+          <option>Email</option>
+          <option>Phone</option>
+          <option>Telegram</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Interest Type</label>
+      <div class="checkbox-group">
+        <label class="checkbox-item">
+          <input type="checkbox" name="interest_type[]" value="Short-Term Lending">
+          <span>Short-Term Lending</span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="interest_type[]" value="Trading Updates">
+          <span>Trading Updates</span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="interest_type[]" value="General Information">
+          <span>General Information</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tell us a little about your interest and any questions you have."></textarea>
+    </div>
+
+    <input type="hidden" name="_subject" value="New Tyr Capital lender form submission">
+
+    <div class="form-submit">
+      <button type="submit" class="submit-btn">Submit Inquiry</button>
+      <div class="form-note">We will review your submission and follow up with more information.</div>
+    </div>
+  </form>
 </section>
 
     <section id="contact" class="section-card">

@@ -20,14 +20,14 @@
   <meta property="og:url" content="https://tyrcapital.io/blog.html">
   <meta property="og:title" content="Research &amp; Insights | Tyr Capital Blog">
   <meta property="og:description" content="Explore Tyr Capital research, crypto market insights, Bitcoin analysis, private lending education, and digital asset commentary.">
-  <meta property="og:image" content="https://tyrcapital.io/images/tyr-bg.png">
+  <meta property="og:image" content="https://tyrcapital.io/images/tyr-bg.webp">
   <meta property="og:site_name" content="Tyr Capital">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Research &amp; Insights | Tyr Capital Blog">
   <meta name="twitter:description" content="Explore Tyr Capital research, crypto market insights, Bitcoin analysis, private lending education, and digital asset commentary.">
-  <meta name="twitter:image" content="https://tyrcapital.io/images/tyr-bg.png">
+  <meta name="twitter:image" content="https://tyrcapital.io/images/tyr-bg.webp">
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
@@ -40,14 +40,15 @@
         <span class="brand-mark"></span>
         <span>Tyr Capital</span>
       </a>
-      <div class="nav-links">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
         <a href="index.html#about">About</a>
-        <a href="index.html#strategy">Strategy</a>
         <a href="blog.html">Blog</a>
-        <a href="index.html#bitcoin">Bitcoin</a>
-        <a href="index.html#lender">Become A Lender</a>
+        <a href="index.html#ceo">Leadership</a>
         <a href="index.html#contact">Contact</a>
-        <a class="telegram-btn" href="https://t.me/tyrcapitaltrades" target="_blank" rel="noopener noreferrer">Join Telegram</a>
+        <a class="telegram-btn" href="index.html#lender">Become A Lender</a>
       </div>
     </div>
   </div>
@@ -232,11 +233,75 @@
     </div>
   </section>
 
-  <footer class="container">
-    <div class="footer-card">
-      Tyr Capital research and blog content are provided for informational purposes only and do not constitute financial or investment advice.
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand" style="margin-bottom:12px; display:inline-flex;">
+            <span class="brand-mark"></span>
+            <span>Tyr Capital</span>
+          </a>
+          <p class="footer-tagline">Disciplined execution.<br>Structured risk. Long-term thinking.</p>
+          <a href="https://t.me/tyrcapitaltrades" target="_blank" rel="noopener noreferrer" class="footer-telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Join Telegram Channel
+          </a>
+        </div>
+
+        <!-- Nav column -->
+        <div class="footer-nav">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#ceo">Leadership</a></li>
+            <li><a href="index.html#lender">Become A Lender</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact column -->
+        <div class="footer-nav">
+          <h4 class="footer-heading">Contact</h4>
+          <ul>
+            <li><a href="mailto:tyrcapitalllc@gmail.com">tyrcapitalllc@gmail.com</a></li>
+            <li><a href="https://t.me/tyrcapitaltrades" target="_blank" rel="noopener noreferrer">Telegram: Tyr Capital Trades</a></li>
+            <li><a href="https://www.linkedin.com/in/coley-grantham-1b10a4bb/" target="_blank" rel="noopener noreferrer">LinkedIn: Coley Grantham</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Tyr Capital research and blog content are provided for informational purposes only and do not constitute financial or investment advice.</p>
+        <p class="footer-copy">&copy; <span id="footerYear"></span> Tyr Capital LLC. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+  <script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const navLinks = document.getElementById('navLinks');
+      if (hamburgerBtn && navLinks) {
+        hamburgerBtn.addEventListener('click', function () {
+          const isOpen = navLinks.classList.toggle('open');
+          hamburgerBtn.classList.toggle('open', isOpen);
+          hamburgerBtn.setAttribute('aria-expanded', isOpen);
+        });
+        navLinks.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            hamburgerBtn.classList.remove('open');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>

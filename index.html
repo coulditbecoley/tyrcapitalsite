@@ -2,618 +2,18 @@
 <html lang="en">
 <head>
   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HGF1EDX4Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6HGF1EDX4Y');
-</script>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6HGF1EDX4Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6HGF1EDX4Y');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tyr Capital</title>
-
-  <style>
-    :root{
-      --bg:#07101c;
-      --bg-secondary:#0d1726;
-      --card:rgba(14,24,38,0.88);
-      --card-strong:rgba(10,18,30,0.94);
-      --text:#e8edf5;
-      --muted:#b8c2d3;
-      --accent:#c8a45a;
-      --accent-2:#e1c27a;
-      --border:rgba(255,255,255,0.08);
-      --shadow:0 18px 45px rgba(0,0,0,0.35);
-      --radius:22px;
-      --nav-height:76px;
-    }
-
-    *{
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      margin:0;
-      font-family:Georgia, "Times New Roman", Times, serif;
-      background:linear-gradient(180deg,#07101c 0%,#091423 45%,#0b1420 100%);
-      color:var(--text);
-      line-height:1.7;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    .container{
-      width:min(1120px, calc(100% - 40px));
-      margin:0 auto;
-    }
-
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      backdrop-filter:blur(10px);
-      background:rgba(6,12,20,0.82);
-      border-bottom:1px solid rgba(200,164,90,0.28);
-      box-shadow:0 10px 30px rgba(0,0,0,0.25);
-    }
-
-    .nav{
-      min-height:var(--nav-height);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      font-size:1.55rem;
-      font-weight:700;
-      color:#fff;
-      letter-spacing:0.8px;
-      white-space:nowrap;
-    }
-
-    .brand-mark{
-      width:12px;
-      height:36px;
-      border-radius:999px;
-      background:linear-gradient(180deg,var(--accent-2),var(--accent));
-      box-shadow:0 0 18px rgba(200,164,90,0.4);
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:24px;
-      flex-wrap:wrap;
-    }
-
-    .nav-links a{
-      color:#d7deea;
-      font-family:"Segoe UI", Arial, sans-serif;
-      font-size:0.98rem;
-      transition:color 0.2s ease, transform 0.2s ease;
-      position:relative;
-    }
-
-    .nav-links a::after{
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:-6px;
-      width:0;
-      height:2px;
-      background:linear-gradient(90deg,var(--accent-2),var(--accent));
-      transition:width 0.25s ease;
-    }
-
-    .nav-links a:hover{
-      color:#fff;
-      transform:translateY(-1px);
-    }
-
-    .nav-links a:hover::after{
-      width:100%;
-    }
-
-    .telegram-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px 18px;
-      border-radius:14px;
-      font-family:"Segoe UI", Arial, sans-serif;
-      font-weight:700;
-      font-size:0.95rem;
-      color:#08111c;
-      background:linear-gradient(135deg,var(--accent-2),var(--accent));
-      box-shadow:0 12px 30px rgba(200,164,90,0.28);
-      transition:transform 0.2s ease, box-shadow 0.2s ease;
-      white-space:nowrap;
-    }
-
-    .telegram-btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 16px 34px rgba(200,164,90,0.34);
-    }
-
-    header{
-      position:relative;
-      min-height:620px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:120px 20px 70px;
-      background-image:url("images/tyr-bg.png");
-      background-size:cover;
-      background-position:center;
-      border-bottom:1px solid rgba(255,255,255,0.06);
-      overflow:hidden;
-    }
-
-    header::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to bottom, rgba(4,10,18,0.48), rgba(4,10,18,0.84));
-    }
-
-    .hero-card{
-      position:relative;
-      z-index:2;
-      background:rgba(7,14,24,0.52);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:28px;
-      padding:46px 36px;
-      box-shadow:var(--shadow);
-      max-width:760px;
-      backdrop-filter:blur(6px);
-    }
-
-    h1{
-      margin:0;
-      font-size:clamp(3rem,6vw,4.9rem);
-      font-weight:700;
-      letter-spacing:2px;
-      color:#fff;
-    }
-
-    .gold-line{
-      width:170px;
-      height:3px;
-      margin:18px auto 0;
-      border-radius:999px;
-      background:linear-gradient(90deg, rgba(0,0,0,0), var(--accent-2), var(--accent), rgba(0,0,0,0));
-      box-shadow:0 0 18px rgba(200,164,90,0.35);
-    }
-
-    .hero-actions{
-      margin-top:26px;
-      display:flex;
-      gap:14px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-
-    .hero-btn{
-      display:inline-block;
-      padding:13px 20px;
-      border-radius:14px;
-      font-family:"Segoe UI", Arial, sans-serif;
-      font-weight:700;
-      font-size:0.96rem;
-      transition:transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .hero-btn-primary{
-      background:linear-gradient(135deg,var(--accent-2),var(--accent));
-      color:#08111c;
-      box-shadow:0 12px 30px rgba(200,164,90,0.26);
-    }
-
-    .hero-btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .hero-btn-secondary{
-      border:1px solid rgba(255,255,255,0.14);
-      color:#fff;
-      background:rgba(255,255,255,0.04);
-    }
-
-    .hero-btn-secondary:hover{
-      background:rgba(255,255,255,0.08);
-      transform:translateY(-2px);
-    }
-
-    main{
-      padding:70px 0 50px;
-    }
-
-    .section-card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:34px 30px;
-      margin-bottom:28px;
-    }
-
-    h2{
-      margin:0 0 16px;
-      font-size:1.9rem;
-      font-weight:700;
-      color:var(--accent);
-    }
-
-    p{
-      margin:0 0 16px;
-      font-size:1.05rem;
-      color:var(--muted);
-      font-family:"Segoe UI", Arial, sans-serif;
-    }
-
-    .image-wrap{
-      margin-top:20px;
-    }
-
-    .feature-image{
-      width:100%;
-      display:block;
-      border-radius:20px;
-      box-shadow:0 16px 40px rgba(0,0,0,0.35);
-      border:1px solid rgba(255,255,255,0.08);
-    }
-
-    .contact-box{
-      display:inline-block;
-      margin-top:15px;
-      padding:14px 20px;
-      background:rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:16px;
-      color:#f3f6fb;
-      font-family:"Segoe UI", Arial, sans-serif;
-      font-weight:600;
-      box-shadow:0 10px 25px rgba(0,0,0,0.25);
-    }
-
-    .widget-card{
-      overflow:hidden;
-      padding:18px 18px 8px;
-      background:var(--card-strong);
-    }
-
-    .widget-title{
-      margin-bottom:14px;
-      color:var(--accent);
-      font-size:1.25rem;
-      font-weight:700;
-    }
-
-    .lender-form{
-      margin-top:22px;
-      display:grid;
-      gap:16px;
-    }
-
-    .form-row{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:16px;
-    }
-
-    .form-group{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-    }
-
-    .form-group label{
-      font-family:"Segoe UI", Arial, sans-serif;
-      font-size:0.95rem;
-      font-weight:600;
-      color:#e8edf5;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .custom-select-trigger{
-      width:100%;
-      padding:14px 16px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,0.10);
-      background:rgba(255,255,255,0.04);
-      color:#f3f6fb;
-      font-family:"Segoe UI", Arial, sans-serif;
-      font-size:0.98rem;
-      outline:none;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);
-      transition:border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder{
-      color:#95a1b7;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .custom-select.open .custom-select-trigger{
-      border-color:rgba(200,164,90,0.75);
-      box-shadow:0 0 0 3px rgba(200,164,90,0.12);
-      background:rgba(255,255,255,0.06);
-    }
-
-    .form-group textarea{
-      min-height:130px;
-      resize:vertical;
-    }
-
-    .custom-select{
-      position:relative;
-      font-family:"Segoe UI", Arial, sans-serif;
-    }
-
-    .custom-select-trigger{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      cursor:pointer;
-      user-select:none;
-    }
-
-    .custom-select-trigger::after{
-      content:"▾";
-      font-size:0.95rem;
-      color:#c8a45a;
-      margin-left:12px;
-    }
-
-    .custom-options{
-      position:absolute;
-      top:calc(100% + 8px);
-      left:0;
-      right:0;
-      background:#0d1726;
-      border:1px solid rgba(200,164,90,0.28);
-      border-radius:14px;
-      box-shadow:0 18px 40px rgba(0,0,0,0.42);
-      overflow:hidden;
-      opacity:0;
-      transform:translateY(8px);
-      pointer-events:none;
-      transition:opacity 0.18s ease, transform 0.18s ease;
-      z-index:50;
-    }
-
-    .custom-select.open .custom-options{
-      opacity:1;
-      transform:translateY(0);
-      pointer-events:auto;
-    }
-
-    .custom-option{
-      padding:13px 16px;
-      color:#e8edf5;
-      background:#0d1726;
-      cursor:pointer;
-      transition:background 0.18s ease, color 0.18s ease;
-    }
-
-    .custom-option:hover,
-    .custom-option.selected{
-      background:rgba(200,164,90,0.14);
-      color:#fff;
-    }
-
-    .hidden-select{
-      display:none;
-    }
-
-    .form-submit{
-      margin-top:6px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      align-items:center;
-    }
-
-    .submit-btn{
-      border:none;
-      cursor:pointer;
-      padding:14px 22px;
-      border-radius:14px;
-      font-family:"Segoe UI", Arial, sans-serif;
-      font-weight:700;
-      font-size:0.98rem;
-      color:#08111c;
-      background:linear-gradient(135deg,#e1c27a,#c8a45a);
-      box-shadow:0 12px 30px rgba(200,164,90,0.28);
-      transition:transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .submit-btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 16px 34px rgba(200,164,90,0.34);
-    }
-
-    .form-note{
-      font-family:"Segoe UI", Arial, sans-serif;
-      font-size:0.9rem;
-      color:#97a3b8;
-    }
-
-    .success-modal{
-      position:fixed;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:20px;
-      background:rgba(3,8,15,0.72);
-      backdrop-filter:blur(6px);
-      opacity:0;
-      pointer-events:none;
-      transition:opacity 0.25s ease;
-      z-index:2000;
-    }
-
-    .success-modal.show{
-      opacity:1;
-      pointer-events:auto;
-    }
-
-    .success-modal-card{
-      width:min(520px, 100%);
-      background:rgba(10,18,30,0.96);
-      border:1px solid rgba(200,164,90,0.26);
-      border-radius:24px;
-      box-shadow:0 24px 60px rgba(0,0,0,0.45);
-      padding:30px 26px;
-      text-align:center;
-    }
-
-    .success-icon{
-      width:68px;
-      height:68px;
-      margin:0 auto 18px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:2rem;
-      color:#08111c;
-      background:linear-gradient(135deg,#e1c27a,#c8a45a);
-      box-shadow:0 12px 30px rgba(200,164,90,0.28);
-    }
-
-    .success-modal-card h3{
-      margin:0 0 10px;
-      color:#f3f6fb;
-      font-size:1.8rem;
-      font-family:"Segoe UI", Arial, sans-serif;
-    }
-
-    .success-modal-card p{
-      margin:0 0 20px;
-      color:#b8c2d3;
-      font-family:"Segoe UI", Arial, sans-serif;
-    }
-
-    .success-modal-actions{
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-
-    .modal-btn{
-      border:none;
-      cursor:pointer;
-      padding:12px 18px;
-      border-radius:14px;
-      font-family:"Segoe UI", Arial, sans-serif;
-      font-weight:700;
-      font-size:0.95rem;
-      transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
-
-    .modal-btn-primary{
-      color:#08111c;
-      background:linear-gradient(135deg,#e1c27a,#c8a45a);
-      box-shadow:0 12px 30px rgba(200,164,90,0.28);
-    }
-
-    .modal-btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .modal-btn-secondary{
-      color:#f3f6fb;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.08);
-    }
-
-    .modal-btn-secondary:hover{
-      background:rgba(255,255,255,0.08);
-      transform:translateY(-2px);
-    }
-
-    footer{
-      padding:10px 0 50px;
-    }
-
-    .footer-card{
-      background:rgba(10,18,30,0.92);
-      border:1px solid var(--border);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      padding:22px 24px;
-      color:#97a3b8;
-      font-size:0.92rem;
-      font-family:"Segoe UI", Arial, sans-serif;
-    }
-
-    @media (max-width: 900px){
-      .nav{
-        padding:14px 0;
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .nav-links{
-        gap:18px;
-      }
-
-      header{
-        min-height:560px;
-        padding-top:100px;
-      }
-    }
-
-    @media (max-width: 700px){
-      .form-row{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 640px){
-      .container{
-        width:min(100% - 24px, 1120px);
-      }
-
-      .hero-card{
-        padding:34px 22px;
-      }
-
-      .section-card{
-        padding:24px 20px;
-      }
-
-      .brand{
-        font-size:1.3rem;
-      }
-
-      h2{
-        font-size:1.55rem;
-      }
-    }
-  </style>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -623,7 +23,6 @@
         <span class="brand-mark"></span>
         <span>Tyr Capital</span>
       </a>
-
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="blog.html">Blog</a>
@@ -632,18 +31,17 @@
         <a href="#bitcoin">Bitcoin</a>
         <a href="#lender">Become A Lender</a>
         <a href="#contact">Contact</a>
-        <a class="telegram-btn" href="https://t.me/tyrcapitaltrades" target="_blank">Join Telegram</a>
+        <a class="telegram-btn" href="https://t.me/tyrcapitaltrades" target="_blank" rel="noopener noreferrer">Join Telegram</a>
       </div>
     </div>
   </div>
 
-  <header id="top">
+  <header id="top" class="site-hero">
     <div class="hero-card">
       <h1>Tyr Capital</h1>
       <div class="gold-line"></div>
-
       <div class="hero-actions">
-        <a class="hero-btn hero-btn-primary" href="https://t.me/tyrcapitaltrades" target="_blank">Join Telegram Channel</a>
+        <a class="hero-btn hero-btn-primary" href="https://t.me/tyrcapitaltrades" target="_blank" rel="noopener noreferrer">Join Telegram Channel</a>
         <a class="hero-btn hero-btn-secondary" href="#bitcoin">View Bitcoin Widget</a>
       </div>
     </div>
@@ -713,7 +111,6 @@
             <label for="full-name">Full Name</label>
             <input type="text" id="full-name" name="full_name" placeholder="Your full name" required>
           </div>
-
           <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="you@example.com" required>
@@ -725,7 +122,6 @@
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="Optional">
           </div>
-
           <div class="form-group">
             <label>Preferred Loan Term</label>
             <div class="custom-select">
@@ -769,7 +165,6 @@
               </select>
             </div>
           </div>
-
           <div class="form-group">
             <label>Preferred Contact Method</label>
             <div class="custom-select">
@@ -811,7 +206,7 @@
       </p>
       <p>
         Telegram:
-        <a href="https://t.me/tyrcapitaltrades" target="_blank" style="color:#e1c27a;">Tyr Capital Trades</a>
+        <a href="https://t.me/tyrcapitaltrades" target="_blank" rel="noopener noreferrer" style="color:#e1c27a;">Tyr Capital Trades</a>
       </p>
       <div class="contact-box">
         tyrcapitalllc@gmail.com
@@ -843,160 +238,136 @@
     </div>
   </div>
 
- <script src="https://s3.tradingview.com/tv.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (typeof TradingView !== 'undefined' && document.getElementById('tradingview_btc_widget')) {
-      new TradingView.widget({
-        width: "100%",
-        height: 420,
-        symbol: "BINANCE:BTCUSDT",
-        interval: "240",
-        timezone: "Etc/UTC",
-        theme: "dark",
-        style: "1",
-        locale: "en",
-        toolbar_bg: "#0d1726",
-        enable_publishing: false,
-        hide_side_toolbar: false,
-        allow_symbol_change: true,
-        container_id: "tradingview_btc_widget"
-      });
-    }
-
-    document.querySelectorAll('.custom-select').forEach(select => {
-      const trigger = select.querySelector('.custom-select-trigger');
-      const hiddenSelect = select.querySelector('.hidden-select');
-      const optionItems = select.querySelectorAll('.custom-option');
-
-      if (!trigger || !hiddenSelect || !optionItems.length) return;
-
-      trigger.addEventListener('click', function (e) {
-        e.stopPropagation();
-
-        document.querySelectorAll('.custom-select').forEach(other => {
-          if (other !== select) other.classList.remove('open');
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof TradingView !== 'undefined' && document.getElementById('tradingview_btc_widget')) {
+        new TradingView.widget({
+          width: "100%",
+          height: 420,
+          symbol: "BINANCE:BTCUSDT",
+          interval: "240",
+          timezone: "Etc/UTC",
+          theme: "dark",
+          style: "1",
+          locale: "en",
+          toolbar_bg: "#0d1726",
+          enable_publishing: false,
+          hide_side_toolbar: false,
+          allow_symbol_change: true,
+          container_id: "tradingview_btc_widget"
         });
+      }
 
-        select.classList.toggle('open');
-      });
+      document.querySelectorAll('.custom-select').forEach(select => {
+        const trigger = select.querySelector('.custom-select-trigger');
+        const hiddenSelect = select.querySelector('.hidden-select');
+        const optionItems = select.querySelectorAll('.custom-option');
 
-      optionItems.forEach(option => {
-        option.addEventListener('click', function (e) {
+        if (!trigger || !hiddenSelect || !optionItems.length) return;
+
+        trigger.addEventListener('click', function (e) {
           e.stopPropagation();
-
-          const value = option.getAttribute('data-value') || '';
-          const text = option.textContent.trim();
-
-          trigger.textContent = text;
-          hiddenSelect.value = value;
-
-          optionItems.forEach(item => item.classList.remove('selected'));
-          option.classList.add('selected');
-
-          select.classList.remove('open');
-        });
-      });
-    });
-
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.custom-select')) {
-        document.querySelectorAll('.custom-select').forEach(select => {
-          select.classList.remove('open');
-        });
-      }
-    });
-
-    const lenderForm = document.getElementById('lenderForm');
-    const successModal = document.getElementById('successModal');
-    const closeSuccessModal = document.getElementById('closeSuccessModal');
-
-    function openSuccessModal() {
-      if (successModal) {
-        successModal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeModal() {
-      if (successModal) {
-        successModal.classList.remove('show');
-        document.body.style.overflow = '';
-      }
-    }
-
-    if (closeSuccessModal) {
-      closeSuccessModal.addEventListener('click', closeModal);
-    }
-
-    if (successModal) {
-      successModal.addEventListener('click', function (e) {
-        if (e.target === successModal) closeModal();
-      });
-    }
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeModal();
-    });
-
-    if (lenderForm) {
-      lenderForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(lenderForm);
-
-        try {
-          const response = await fetch(lenderForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'Accept': 'application/json'
-            }
+          document.querySelectorAll('.custom-select').forEach(other => {
+            if (other !== select) other.classList.remove('open');
           });
+          select.classList.toggle('open');
+        });
 
-          if (response.ok) {
-            const loanTerm = lenderForm.querySelector('select[name="loan_term"]')?.value || '';
-            const amountRange = lenderForm.querySelector('select[name="amount_range"]')?.value || '';
-            const contactMethod = lenderForm.querySelector('select[name="contact_method"]')?.value || '';
+        optionItems.forEach(option => {
+          option.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const value = option.getAttribute('data-value') || '';
+            const text = option.textContent.trim();
+            trigger.textContent = text;
+            hiddenSelect.value = value;
+            optionItems.forEach(item => item.classList.remove('selected'));
+            option.classList.add('selected');
+            select.classList.remove('open');
+          });
+        });
+      });
 
-            if (typeof gtag === 'function') {
-              gtag('event', 'generate_lead', {
-                event_category: 'Lender Form',
-                event_label: 'Become A Lender Form Submission',
-                loan_term: loanTerm,
-                amount_range: amountRange,
-                contact_method: contactMethod,
-                value: 1
-              });
-            }
-
-            lenderForm.reset();
-
-            document.querySelectorAll('.custom-select').forEach(select => {
-              const trigger = select.querySelector('.custom-select-trigger');
-              const firstOption = select.querySelector('.custom-option');
-              const hiddenSelect = select.querySelector('.hidden-select');
-
-              if (!trigger || !firstOption || !hiddenSelect) return;
-
-              trigger.textContent = firstOption.textContent.trim();
-              hiddenSelect.value = firstOption.getAttribute('data-value') || '';
-
-              select.querySelectorAll('.custom-option').forEach(item => item.classList.remove('selected'));
-              firstOption.classList.add('selected');
-              select.classList.remove('open');
-            });
-
-            openSuccessModal();
-          } else {
-            alert('There was a problem submitting your form. Please try again.');
-          }
-        } catch (error) {
-          alert('There was a problem submitting your form. Please try again.');
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.custom-select')) {
+          document.querySelectorAll('.custom-select').forEach(s => s.classList.remove('open'));
         }
       });
-    }
-  });
-</script>
+
+      const lenderForm = document.getElementById('lenderForm');
+      const successModal = document.getElementById('successModal');
+      const closeSuccessModal = document.getElementById('closeSuccessModal');
+
+      function openSuccessModal() {
+        if (successModal) {
+          successModal.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeModal() {
+        if (successModal) {
+          successModal.classList.remove('show');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (closeSuccessModal) closeSuccessModal.addEventListener('click', closeModal);
+      if (successModal) {
+        successModal.addEventListener('click', function (e) {
+          if (e.target === successModal) closeModal();
+        });
+      }
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      if (lenderForm) {
+        lenderForm.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          const formData = new FormData(lenderForm);
+          try {
+            const response = await fetch(lenderForm.action, {
+              method: 'POST',
+              body: formData,
+              headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+              const loanTerm = lenderForm.querySelector('select[name="loan_term"]')?.value || '';
+              const amountRange = lenderForm.querySelector('select[name="amount_range"]')?.value || '';
+              const contactMethod = lenderForm.querySelector('select[name="contact_method"]')?.value || '';
+              if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                  event_category: 'Lender Form',
+                  event_label: 'Become A Lender Form Submission',
+                  loan_term: loanTerm,
+                  amount_range: amountRange,
+                  contact_method: contactMethod,
+                  value: 1
+                });
+              }
+              lenderForm.reset();
+              document.querySelectorAll('.custom-select').forEach(select => {
+                const trigger = select.querySelector('.custom-select-trigger');
+                const firstOption = select.querySelector('.custom-option');
+                const hiddenSelect = select.querySelector('.hidden-select');
+                if (!trigger || !firstOption || !hiddenSelect) return;
+                trigger.textContent = firstOption.textContent.trim();
+                hiddenSelect.value = firstOption.getAttribute('data-value') || '';
+                select.querySelectorAll('.custom-option').forEach(item => item.classList.remove('selected'));
+                firstOption.classList.add('selected');
+                select.classList.remove('open');
+              });
+              openSuccessModal();
+            } else {
+              alert('There was a problem submitting your form. Please try again.');
+            }
+          } catch (error) {
+            alert('There was a problem submitting your form. Please try again.');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

@@ -34,6 +34,9 @@
 </head>
 <body>
 
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8679;</button>
+
   <div class="topbar">
     <div class="container nav">
       <a href="index.html" class="brand">
@@ -73,22 +76,76 @@
 
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <div>
-          <h2>Latest Articles</h2>
+
+      <!-- Featured Article -->
+      <div class="featured-article">
+        <a href="posts/btc-higher-low-breakdown.html" class="featured-thumb">
+          <img src="images/thumb-bitcoin.jpg" alt="BTC Higher Low Breakdown" loading="lazy">
+          <span class="featured-label">Featured</span>
+        </a>
+        <div class="featured-content">
+          <span class="post-category post-category-featured">Bitcoin</span>
+          <h2 class="featured-title">
+            <a href="posts/btc-higher-low-breakdown.html">BTC Higher Low Breakdown</a>
+          </h2>
+          <p class="featured-excerpt">
+            Bitcoin just printed a higher low on the 6H timeframe. This is how trends quietly begin — and most traders miss it. Understanding this structural shift is the difference between entering early and chasing a move that has already happened.
+          </p>
+          <div class="post-meta">
+            <span class="post-author">&#9998; Coley Grantham</span>
+            <span class="post-date">&#128197; April 2025</span>
+            <span class="post-read-time">&#9201; 5 min read</span>
+          </div>
+          <a class="post-link" href="posts/btc-higher-low-breakdown.html">Read Article →</a>
         </div>
-        <p>
-          Educational content, crypto market commentary, and lending-focused insights structured to build long-term authority.
-        </p>
       </div>
 
-      <div class="post-grid">
+      <!-- Section Header with Post Count -->
+      <div class="section-header" style="margin-top: 3rem;">
+        <div>
+          <h2>Latest Articles <span class="post-count-badge">9 Articles</span></h2>
+        </div>
+        <p>Educational content, crypto market commentary, and lending-focused insights structured to build long-term authority.</p>
+      </div>
 
-        <article class="post-card">
-          <div class="post-thumb">
-            <span class="post-category">Bitcoin</span>
-          </div>
+      <!-- Search + Filter Bar -->
+      <div class="blog-controls">
+        <div class="blog-search-wrap">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="blogSearch" class="blog-search" placeholder="Search articles..." aria-label="Search articles">
+        </div>
+        <div class="filter-bar" id="filterBar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="bitcoin">Bitcoin</button>
+          <button class="filter-btn" data-filter="lending">Lending</button>
+          <button class="filter-btn" data-filter="risk">Risk</button>
+          <button class="filter-btn" data-filter="trading-basics">Trading Basics</button>
+          <button class="filter-btn" data-filter="market-cycles">Market Cycles</button>
+          <button class="filter-btn" data-filter="weekly-outlook">Weekly Outlook</button>
+          <button class="filter-btn" data-filter="passive-income">Passive Income</button>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div class="no-results" id="noResults" style="display:none;">
+        <p>No articles found matching your search. Try a different keyword or category.</p>
+      </div>
+
+      <!-- Post Grid -->
+      <div class="post-grid" id="postGrid">
+
+        <article class="post-card fade-in" data-category="bitcoin">
+          <a href="posts/btc-higher-low-breakdown.html" class="post-thumb-link">
+            <div class="post-thumb" style="background-image: url('images/thumb-bitcoin.jpg');">
+              <span class="post-category">Bitcoin</span>
+            </div>
+          </a>
           <div class="post-content">
+            <div class="post-meta">
+              <span class="post-author">&#9998; Coley Grantham</span>
+              <span class="post-date">&#128197; Apr 2025</span>
+              <span class="post-read-time">&#9201; 5 min</span>
+            </div>
             <h3 class="post-title">
               <a href="posts/btc-higher-low-breakdown.html">BTC Higher Low Breakdown</a>
             </h3>
@@ -99,11 +156,18 @@
           </div>
         </article>
 
-        <article class="post-card">
-          <div class="post-thumb">
-            <span class="post-category">Bitcoin</span>
-          </div>
+        <article class="post-card fade-in" data-category="bitcoin">
+          <a href="posts/bitcoin-market-structure.html" class="post-thumb-link">
+            <div class="post-thumb" style="background-image: url('images/thumb-bitcoin.jpg');">
+              <span class="post-category">Bitcoin</span>
+            </div>
+          </a>
           <div class="post-content">
+            <div class="post-meta">
+              <span class="post-author">&#9998; Coley Grantham</span>
+              <span class="post-date">&#128197; Mar 2025</span>
+              <span class="post-read-time">&#9201; 6 min</span>
+            </div>
             <h3 class="post-title">
               <a href="posts/bitcoin-market-structure.html">Bitcoin Market Structure Explained</a>
             </h3>
@@ -114,11 +178,18 @@
           </div>
         </article>
 
-        <article class="post-card">
-          <div class="post-thumb">
-            <span class="post-category">Lending</span>
-          </div>
+        <article class="post-card fade-in" data-category="lending">
+          <a href="posts/short-term-lending-guide.html" class="post-thumb-link">
+            <div class="post-thumb" style="background-image: url('images/thumb-lending.jpg');">
+              <span class="post-category">Lending</span>
+            </div>
+          </a>
           <div class="post-content">
+            <div class="post-meta">
+              <span class="post-author">&#9998; Coley Grantham</span>
+              <span class="post-date">&#128197; Mar 2025</span>
+              <span class="post-read-time">&#9201; 7 min</span>
+            </div>
             <h3 class="post-title">
               <a href="posts/short-term-lending-guide.html">How Short-Term Private Lending Works</a>
             </h3>
@@ -129,11 +200,18 @@
           </div>
         </article>
 
-        <article class="post-card">
-          <div class="post-thumb">
-            <span class="post-category">Risk</span>
-          </div>
+        <article class="post-card fade-in" data-category="risk">
+          <a href="posts/crypto-risk-management.html" class="post-thumb-link">
+            <div class="post-thumb" style="background-image: url('images/thumb-risk.jpg');">
+              <span class="post-category">Risk</span>
+            </div>
+          </a>
           <div class="post-content">
+            <div class="post-meta">
+              <span class="post-author">&#9998; Coley Grantham</span>
+              <span class="post-date">&#128197; Feb 2025</span>
+              <span class="post-read-time">&#9201; 5 min</span>
+            </div>
             <h3 class="post-title">
               <a href="posts/crypto-risk-management.html">Risk Management in Crypto Trading</a>
             </h3>
@@ -144,11 +222,18 @@
           </div>
         </article>
 
-        <article class="post-card">
-          <div class="post-thumb">
-            <span class="post-category">Weekly Outlook</span>
-          </div>
+        <article class="post-card fade-in" data-category="weekly-outlook">
+          <a href="posts/bitcoin-weekly-outlook.html" class="post-thumb-link">
+            <div class="post-thumb" style="background-image: url('images/thumb-outlook.jpg');">
+              <span class="post-category">Weekly Outlook</span>
+            </div>
+          </a>
           <div class="post-content">
+            <div class="post-meta">
+              <span class="post-author">&#9998; Coley Grantham</span>
+              <span class="post-date">&#128197; Feb 2025</span>
+              <span class="post-read-time">&#9201; 4 min</span>
+            </div>
             <h3 class="post-title">
               <a href="posts/bitcoin-weekly-outlook.html">Bitcoin Weekly Market Outlook</a>
             </h3>
@@ -159,11 +244,18 @@
           </div>
         </article>
 
-        <article class="post-card">
-          <div class="post-thumb">
-            <span class="post-category">Passive Income</span>
-          </div>
+        <article class="post-card fade-in" data-category="passive-income">
+          <a href="posts/passive-income-lending.html" class="post-thumb-link">
+            <div class="post-thumb" style="background-image: url('images/thumb-passive.jpg');">
+              <span class="post-category">Passive Income</span>
+            </div>
+          </a>
           <div class="post-content">
+            <div class="post-meta">
+              <span class="post-author">&#9998; Coley Grantham</span>
+              <span class="post-date">&#128197; Jan 2025</span>
+              <span class="post-read-time">&#9201; 6 min</span>
+            </div>
             <h3 class="post-title">
               <a href="posts/passive-income-lending.html">How to Earn Passive Income Through Private Lending</a>
             </h3>
@@ -174,11 +266,18 @@
           </div>
         </article>
 
-        <article class="post-card">
-          <div class="post-thumb">
-            <span class="post-category">Trading Basics</span>
-          </div>
+        <article class="post-card fade-in" data-category="trading-basics">
+          <a href="posts/support-resistance-crypto.html" class="post-thumb-link">
+            <div class="post-thumb" style="background-image: url('images/thumb-trading.jpg');">
+              <span class="post-category">Trading Basics</span>
+            </div>
+          </a>
           <div class="post-content">
+            <div class="post-meta">
+              <span class="post-author">&#9998; Coley Grantham</span>
+              <span class="post-date">&#128197; Jan 2025</span>
+              <span class="post-read-time">&#9201; 5 min</span>
+            </div>
             <h3 class="post-title">
               <a href="posts/support-resistance-crypto.html">Support and Resistance in Crypto Explained</a>
             </h3>
@@ -189,11 +288,18 @@
           </div>
         </article>
 
-        <article class="post-card">
-          <div class="post-thumb">
-            <span class="post-category">Alternatives</span>
-          </div>
+        <article class="post-card fade-in" data-category="market-cycles">
+          <a href="posts/alternative-investments.html" class="post-thumb-link">
+            <div class="post-thumb" style="background-image: url('images/thumb-cycles.jpg');">
+              <span class="post-category">Alternatives</span>
+            </div>
+          </a>
           <div class="post-content">
+            <div class="post-meta">
+              <span class="post-author">&#9998; Coley Grantham</span>
+              <span class="post-date">&#128197; Dec 2024</span>
+              <span class="post-read-time">&#9201; 6 min</span>
+            </div>
             <h3 class="post-title">
               <a href="posts/alternative-investments.html">Alternative Investments Beyond Traditional Savings</a>
             </h3>
@@ -204,11 +310,18 @@
           </div>
         </article>
 
-        <article class="post-card">
-          <div class="post-thumb">
-            <span class="post-category">Market Cycles</span>
-          </div>
+        <article class="post-card fade-in" data-category="market-cycles">
+          <a href="posts/crypto-bull-vs-bear.html" class="post-thumb-link">
+            <div class="post-thumb" style="background-image: url('images/thumb-cycles.jpg');">
+              <span class="post-category">Market Cycles</span>
+            </div>
+          </a>
           <div class="post-content">
+            <div class="post-meta">
+              <span class="post-author">&#9998; Coley Grantham</span>
+              <span class="post-date">&#128197; Dec 2024</span>
+              <span class="post-read-time">&#9201; 5 min</span>
+            </div>
             <h3 class="post-title">
               <a href="posts/crypto-bull-vs-bear.html">Bull vs Bear Markets in Crypto</a>
             </h3>
@@ -219,7 +332,7 @@
           </div>
         </article>
 
-      </div>
+      </div><!-- /post-grid -->
 
       <div class="cta-card">
         <div>
@@ -230,6 +343,7 @@
         </div>
         <a class="cta-btn" href="index.html#lender">Become A Lender</a>
       </div>
+
     </div>
   </section>
 
@@ -280,10 +394,13 @@
       </div>
     </div>
   </footer>
+
   <script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+
+      // Hamburger menu
       const hamburgerBtn = document.getElementById('hamburgerBtn');
       const navLinks = document.getElementById('navLinks');
       if (hamburgerBtn && navLinks) {
@@ -300,6 +417,74 @@
           });
         });
       }
+
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Category filter
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const postCards = document.querySelectorAll('.post-card');
+      const noResults = document.getElementById('noResults');
+      const searchInput = document.getElementById('blogSearch');
+
+      function filterAndSearch() {
+        const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        postCards.forEach(function (card) {
+          const category = card.dataset.category;
+          const title = card.querySelector('.post-title').textContent.toLowerCase();
+          const excerpt = card.querySelector('.post-excerpt').textContent.toLowerCase();
+
+          const matchesFilter = activeFilter === 'all' || category === activeFilter;
+          const matchesSearch = searchTerm === '' || title.includes(searchTerm) || excerpt.includes(searchTerm);
+
+          if (matchesFilter && matchesSearch) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          filterAndSearch();
+          if (typeof gtag === 'function') {
+            gtag('event', 'blog_filter', { event_category: 'Blog', event_label: btn.dataset.filter });
+          }
+        });
+      });
+
+      searchInput.addEventListener('input', filterAndSearch);
+
+      // Scroll fade-in for post cards
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      postCards.forEach(function (card) { observer.observe(card); });
 
       // GA: CTA click tracking
       document.querySelectorAll('a[href*="#lender"], .telegram-btn, .cta-btn, .hero-btn-primary').forEach(function (btn) {
@@ -320,38 +505,26 @@
           if (typeof gtag === 'function') {
             gtag('event', 'article_click', {
               event_category: 'Blog',
-              event_label: link.closest('.post-card')?.querySelector('.post-title')?.textContent.trim() || link.textContent.trim(),
-              page_location: window.location.href
+              event_label: link.closest('.post-card') ? link.closest('.post-card').querySelector('.post-title').textContent.trim() : link.textContent.trim()
             });
           }
         });
       });
 
       // GA: Scroll depth tracking
-      (function () {
-        const milestones = [25, 50, 75, 90];
-        const fired = {};
-        function getScrollPct() {
-          const scrollTop = window.scrollY || document.documentElement.scrollTop;
-          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-          return docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
-        }
-        window.addEventListener('scroll', function () {
-          const pct = getScrollPct();
-          milestones.forEach(function (m) {
-            if (!fired[m] && pct >= m) {
-              fired[m] = true;
-              if (typeof gtag === 'function') {
-                gtag('event', 'scroll_depth', {
-                  event_category: 'Engagement',
-                  event_label: m + '%',
-                  value: m
-                });
-              }
+      const scrollMilestones = { 25: false, 50: false, 75: false, 90: false };
+      window.addEventListener('scroll', function () {
+        const scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        Object.keys(scrollMilestones).forEach(function (milestone) {
+          if (!scrollMilestones[milestone] && scrollPct >= parseInt(milestone)) {
+            scrollMilestones[milestone] = true;
+            if (typeof gtag === 'function') {
+              gtag('event', 'scroll_depth', { event_category: 'Engagement', event_label: milestone + '%', page_location: window.location.href });
             }
-          });
-        }, { passive: true });
-      })();
+          }
+        });
+      });
+
     });
   </script>
 

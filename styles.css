@@ -1250,8 +1250,14 @@ main.container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.credibility-inner::-webkit-scrollbar {
+  display: none;
 }
 
 .credibility-item {
